@@ -16,7 +16,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: fireblackhat/wgcf-docker
+          images: fireblackhat/x-ui
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
