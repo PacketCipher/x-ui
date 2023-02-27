@@ -7,7 +7,7 @@ RUN go build main.go
 FROM debian:11-slim
 LABEL org.opencontainers.image.authors="hossin.asaadi77@gmail.com"
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y --no-install-recommends -y ca-certificates iproute2 \
+RUN apt-get update && apt-get install -y --no-install-recommends -y ca-certificates iproute2 wget unzip \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ENV TZ=Asia/Shanghai
 WORKDIR /root
